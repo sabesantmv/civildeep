@@ -12,5 +12,5 @@
     5. install tensorflow
       pip install --upgrade tensorflow      # for Python 2.7
     6. Clone the repo and start working on it
-        git clone 
+        git clone git@github.com:sabeshuom/civildeep.git
       
