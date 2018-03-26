@@ -1,0 +1,70 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.out
+*.mp4
+*.mp4
+*.mp4
+*.mp4
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+log/
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+*.vscode
+
+# Pyhton project  files #
+######################
+.project
+.pydevproject
+.dat
+.metadata
+*.pyc
+*.npy
+*.npz
+
+# Model files #
+######################
+*.pb
+*.ckpt
+*.caffemodel
+*.solverstate
+
+ui/
+node_modules/
+proj_static/
+demo/venv/
+.idea
+venv/*
