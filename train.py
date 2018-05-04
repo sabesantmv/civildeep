@@ -1,5 +1,4 @@
 #!/usr/bin/python
-
 import tensorflow as tf
 import math
 import numpy as np
@@ -76,6 +75,8 @@ def main(net_config, ckpt_for_init):
 
     summary_writer = tf.summary.FileWriter(log_dir, sess.graph)
 
+    # only saving the checkpoints if the loss is better than the previous one
+    last_saved_loss = 100.0
     for step in range(step_init, config.max_steps):
         # do the optimisation 
         batch_x, batch_y = data.train.next_batch(config.batch_size)
@@ -92,12 +93,14 @@ def main(net_config, ckpt_for_init):
         #save the model for every 500th step
         if(step%500 ==0):
             logger.add('step {:05d} | train_loss {:f} |  val_loss {:f}'.format(step, t_loss, v_loss), do_print=True)
-            checkpoint_path = os.path.join(log_dir,  config.net_config + '.ckpt')
-            saver.save(sess, checkpoint_path, global_step=step)
-            logger.save()
+            if v_loss < last_saved_loss:
+                checkpoint_path = os.path.join(log_dir,  config.net_config + '.ckpt')
+                saver.save(sess, checkpoint_path, global_step=step)
+                logger.save()
+                last_saved_loss = v_loss
 
 
 if __name__ == "__main__":
     net_config = "exp1"
-    ckpt_for_init = ""
+    ckpt_for_init = "continue"
     main(net_config=net_config, ckpt_for_init=ckpt_for_init)

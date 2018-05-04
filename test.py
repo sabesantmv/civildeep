@@ -69,8 +69,19 @@ def main(net_config, ckpt_for_init):
     feed = {x:features, y: output}
     est, v_loss, v_summary = sess.run([y_, val_loss, val_summary], feed_dict=feed)
 
+    # input_headers  = [x.encode('latin1') for x in data.input_header]
     headers = ','.join(data.input_header) + ", gt-y, est-y"
+
     vals = np.concatenate((features, output, est), axis=1)
+    
+    # append dataset default mu and sigma for estimated values
+    mu = np.append(data.mu, data.mu[-1])
+    sigma = np.append(data.sigma, data.sigma[-1])
+
+    # reverse the standardization operation to the vals
+    vals = np.add(vals * sigma, mu)
+
+
     np.savetxt(csv_file, vals, header= headers, delimiter=",")
     summary_writer.add_summary(v_summary, step_init)
     logger.add('val_loss {:f}'.format(v_loss), do_print=True)

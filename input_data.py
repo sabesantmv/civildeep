@@ -88,10 +88,10 @@ def load_datasets(csv_file):
     datasets.val = DataSet(val_features, val_output)
 
     #print the summary of the loaded dataset
-    print "\n\n summary of the loaded dataset"
-    print "--------------------------------"
-    print "train  features :" + str(datasets.train.features.shape[0])
-    print "val features :" + str(datasets.val.features.shape[0])
+    print("\n\n summary of the loaded dataset")
+    print("--------------------------------")
+    print("train  features :" + str(datasets.train.features.shape[0]))
+    print("val features :" + str(datasets.val.features.shape[0]))
     return datasets
 
 if __name__ == "__main__":    

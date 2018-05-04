@@ -6,7 +6,7 @@ epsilon = tf_utils.epsilon
 
 loss_configs = {}
 def loss(func):
-  loss_configs[func.func_name] = func
+  loss_configs[func.__name__] = func
   return func
 
 def compute_loss(est, gt, loss_func):

@@ -14,7 +14,7 @@ max_steps = 1000000
 batch_size = 10
 learning_rate = 0.000001
 train_loss =  "least_square_loss" #"fractional_loss"
-test_loss =  "fractional_loss" #"fractional_loss"
+test_loss =  "least_square_loss" #"fractional_loss"
 
 # pre_trained_files
 model_file = ""

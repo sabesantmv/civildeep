@@ -3,7 +3,11 @@ import os
 from datetime import datetime
 import shutil
 
-
+# python2/3 compatible input
+try:
+    input = raw_input
+except NameError:
+     pass
 
 # Utils realted ot data preocessing
 def make_dir(dir_paths, re_create_dir = False):
@@ -15,7 +19,7 @@ def make_dir(dir_paths, re_create_dir = False):
     for dir_path in dir_paths:
         if (os.path.exists(dir_path) and re_create_dir):
             logger.add('I am about to delete {:s}. Are you sure?>'.format(dir_path), do_print=True)
-            x = raw_input('(y/n)')
+            x = input('(y/n)')
             if not x.lower() == 'y':
                 if dir_path[-1] == '/':
                     dir_path = dir_path[:-1]

@@ -42,7 +42,7 @@ class Config(object):
         config_dict = {}
         if net_config != None:
             config_mod = importlib.import_module("configs." + net_config)
-            config_dict = {key: value for key, value in config_mod.__dict__.iteritems() if not (key.startswith('__') or key.startswith('_'))}
+            config_dict = {key: value for key, value in config_mod.__dict__.items() if not (key.startswith('__') or key.startswith('_'))}
         return config_dict
 
     def _get_config_str(self, config_dict):
