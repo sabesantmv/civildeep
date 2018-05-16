@@ -1,0 +1,390 @@
+form.dropzone {
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    /*margin-bottom: auto;*/
+    margin:0px;
+}
+
+div.plain-box{
+      margin-top: 20px; 
+      width: 250px;
+      height: 110px;
+      line-height: 160px;
+      text-align: center;
+      /*border: 1px solid #123456;*/
+      border-radius: 3px;
+      display: inline-block;
+}
+
+div.blue-box{
+      margin-top: 20px; 
+      width: 260px;
+      height: 110px;
+      line-height: 110px;
+      text-align: center;
+      border-radius: 3px;
+      display: inline-block;
+      color:#fff;
+      background:#0B4251;
+}
+
+form.dropzone .dz-default.dz-message {
+    width: 100%;
+    height: 100%;
+    line-height: 120px;
+    text-align: center;
+    color: #0c3354; /*#fff*/
+    background: #C1CBDA; /*#4993D2;*/
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.flexgrid{
+    width : 100%;
+    margin-left: auto;
+    border-radius: 6px;
+}
+.flexbox{
+    display: -webkit-flex;
+    display:flex;
+    /**flex-flow: row wrap;**/
+    flex-direction:row;
+    flex-wrap: wrap;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.flexbox.col-1{
+    width:8.3333333334%;
+}
+
+.flexbox.col-2{
+    width:16.6666666666777%;
+}
+
+.flexbox.col-3{
+    width:25.0%;
+}
+
+.flexbox.col-4{
+    width:33.3333333334%;
+}
+
+.flexbox.col-5{
+    width:41.66666667%;
+}
+
+.flexbox.col-6{
+    width:50.0000000%;
+}
+
+.flexbox.col-7{
+    width:58.3333333334%;
+}
+
+.flexbox.col-8{
+    width:66.66666666667%;
+}
+
+.flexbox.col-9{
+    width:75.0000000%;
+}
+
+.flexbox.col-10{
+    width:83.333333334%;
+}
+
+.flexbox.col-11{
+    width:91.66666667%;
+}
+.flexbox.flex-row{
+    width:100.0000000%;
+}
+
+.flexbox.vstretch{
+    -webkit-align-items: stretch;
+    align-items: stretch;
+}
+
+.flexbox.vcenter{
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.flexbox.hleft{
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.flexbox.hcenter{
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+/**
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+**/
+
+table.dataTable tbody td{
+    padding: 0px;
+
+}
+
+.dataTables_wrapper{
+    width:100%;
+}
+
+#results-table th{
+    border: 0px solid black !important;
+}
+
+#results-tabl tbody > tr > td {
+    white-space: nowrap;
+}
+
+
+/*div.row { 
+  border-top: 1px dashed #333;
+  border-bottom: 1px dashed #333;
+  border-left: 2px solid;
+  border-right: 2px solid;
+}
+*/
+
+.flexbox.container-dark-border{
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+}
+
+.flexbox.item-dark-border{
+    border-style: solid;
+    border-width: 0px 2px 0px 0px;
+}
+
+.flexbox.container-dash-border{
+    border-style: dashed;
+    border-width: 2px 2px 2px 2px;
+}
+
+.flexbox.item-dash-border{
+    border-style: dashed;
+    border-width: 0px 2px 0px 0px;
+}
+
+.flexrow + .flexrow {
+    border-top:0;
+}
+
+.flexgrid + .flexgrid {
+    border-radius: 0px;
+}
+/*.row + .row {
+border-top:0;
+}*/
+
+.dz-success-mark, .dz-error-mark {
+    display: none;
+}
+
+
+.container {
+    width: 90%;
+}
+
+.flexgrid div.flexrow:last-child {
+  border-bottom:2px solid;
+  border-right: 2px solid;
+  border-left: 2px solid;
+}
+
+
+img.img-thumb{
+    display: block;
+    /**width:100%;**/
+    max-height:100px;
+    max-width:100%;
+    width:auto;
+    height: auto;
+    border-radius: 6px;
+}
+
+
+/* ======================== Bullets points with tick and cross li ======== */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+/*body {
+  padding: 0 2em;
+  font-size: 1.3em;
+  font-family: 'Roboto', 'sans-serif';
+  color: white;
+  background: black;
+  input-placeholder: red;
+}
+h1 { color: papayawhip }*/
+
+/* List styling */
+.featureList, .featureList ul {
+  margin-top: 0;
+  padding-left: 2em;
+  list-style-type: none;
+}
+.featureList li:before {
+  position: absolute;
+  margin-left: -1.3em;
+  font-weight: bold;
+}
+.featureList li.tick:before {
+  content: "\2713";
+  color: #31708F;
+}
+.featureList li.cross:before {
+  content: "\2717";
+  color: crimson;
+}
+
+
+/* ======================== Popups ======== */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+
+/* ======================== grid_image ======== */
+div.grid-image{
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+a.grid-image{
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  margin-right: 8px;
+  text-decoration: none;
+  color: black;
+  border:1px solid #e8ebf5;
+  border-radius: 3px;
+
+}
+
+a.grid-image:nth-of-type(2n) {
+  margin-right: 0;
+} 
+
+@media screen and (min-width: 50em) {
+  a.grid-image {
+    width: calc(10% - 6px);
+  }
+
+  a.grid-image:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+  
+  a.grid-image:nth-of-type(4n) {
+    margin-right: 0;
+  }
+} 
+
+a.grid-image:hover img {
+  transform: scale(1.5);
+}
+
+figure {
+  margin: 0;
+  /*overflow: hidden;*/
+}
+
+figcaption {
+  margin-top: 15px;
+}
+
+img.gridddd-image {
+  border: none;
+  width: 100%;
+  max-height: 100px;
+  display: block;
+  background: #ccc;
+  transition: transform .2s ease-in-out;
+}
+
+
+img.grid-image{
+    display: block;
+    /**width:100%;**/
+    max-height:100px;
+    max-width:100%;
+    width:auto;
+    height: auto;
+    border-radius: 6px;
+    background: #ccc;
+    transition: transform .2s ease-in-out;
+}

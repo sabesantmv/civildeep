@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head_content %}
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+{% endblock %}
+
+{% block page_content %}
+
+<!-- Jumbotron Header -->
+<header class="jumbotron hero-spacer">
+    <p> Artificial Intelligence in strutural and fire designs</p>
+    <ion-checkbox> Machine Learning</ion-checkbox><br>
+    <ion-checkbox> Computer Vision</ion-checkbox><br>
+    <ion-checkbox> Deep Learning</ion-checkbox>
+    <ion-checkbox> Structural designs</ion-checkbox>
+    <ion-checkbox> Fire designs</ion-checkbox>
+</header>
+
+<!-- row 1 -->
+<div class="row text-center">
+    <!--cfss_fire -->
+    <div class="col-md-3 col-sm-6 hero-feature">
+        <a href="cfss_fire" class="btn thumbnail" data-toggle="tooltip" data-placement="auto" title="CFSS fire design using design rules" >
+            <img src="{%static 'assets/cfss_fire.jpg'%}" alt="">
+            <div class="caption">
+                <h4>CFSS Fire Designs</h4>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}

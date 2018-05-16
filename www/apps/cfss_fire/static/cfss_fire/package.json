@@ -1,0 +1,18 @@
+{
+  "license": "contact the author for license permission.",
+  "version": "1.0.0",
+  "name": "cfss_fire",
+  "repository": "https://github.com/sabesantmv/civildeep.git",
+  "scripts": {
+    "watch-css": "nodemon --watch scss -x \"npm run build-css\"",
+    "watch": "concurrently \"npm run watch-css\"",
+    "build": "npm run build-css",
+    "build-css": "node-sass scss/ -o css/"
+  },
+  "dependencies": {
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.9.2"
+  },
+  "homepage": "https://qut.edu.au",
+  "description": "Reserach works"
+}

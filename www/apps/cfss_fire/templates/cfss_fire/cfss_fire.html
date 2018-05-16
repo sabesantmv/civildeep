@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head_content %}
+    <link href="{% static 'cfss_fire/css/cfss_fire.css' %}" rel="stylesheet">
+    <script>
+        var STATIC_URL = "{% static '' %}"
+    </script>
+    <script type="text/javascript" src="{% static 'cfss_fire/js/cfss_fire.js' %}"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+    <script src="{% static 'js/downloaded_scripts/jquery.twbsPagination.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/downloaded_scripts/jquery.lazyload.min.js' %}"></script>
+{% endblock %}
+
+{% block page_content %}
+
+<!-- Jumbotron Header  -->
+<div class="jumbotron hero-spacer">
+    <p> CFSS fire designs</p>
+    <div class="wrapper" id="nav_steps">	
+            <div class="arrow-steps clearfix">
+                    <div class="step current"> <span> Wall type</span> </div>
+                    <div class="step"> <span>Material</span> </div>
+                    <div class="step"> <span> Time-Temp</span> </div>
+                    <div class="step"> <span>Result</span> </div>
+            </div>
+    </div>
+    <div class="main" id="main-container">
+        <div id="wall_config">
+            <div class="config-labels">
+                <div class="txt-label">wall configuration</div>
+                <select name="wall_config" id="wall_config" onchange="update_wall_config(this)">
+                                <option value="0" selected="">2Pb -no ins</option>
+                                <option value="1" selected="">1Pn -no ins</option>
+                                <option value="2" selected="">2Pb -Cav ins</option>
+                                <option value="3" selected="">1Pb -Cav ins</option>
+                                <option value="4" selected="">2Pb -Ext ins</option>
+                                <option value="5" selected="">User defined</option>
+                </select>
+            </div>
+            <!-- <div class="config-labels">Stud configuration</div>
+            <div class="config-labels">Stud Geometry</div>
+            <div class="config-labels">Other</div> -->
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<!-- page content -->
+
+
+{% endblock %}

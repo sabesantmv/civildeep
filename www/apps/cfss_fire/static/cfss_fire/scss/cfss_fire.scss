@@ -1,0 +1,150 @@
+
+// .clearfix:after {
+//     clear: both;
+//     content: "";
+//     display: block;
+//     height: 0;
+// }
+
+// .container {
+// 	font-family: 'Lato', sans-serif;
+// 	width: 1000px;
+// 	margin: 0 auto;
+// }
+
+// .wrapper {
+// 	display: table-cell;
+// 	height: 400px;
+// 	vertical-align: middle;
+// }
+
+// .nav {
+// 	margin-top: 40px;
+// }
+
+// .pull-right {
+// 	float: right;
+// }
+
+// a, a:active {
+// 	color: #333;
+// 	text-decoration: none;
+// }
+
+// a:hover {
+// 	color: #999;
+// }
+
+/* Breadcrups CSS */
+.main{
+    width: 100%;
+    border: 1px solid white;
+    padding: 20px;
+    margin-top: 30px;
+    min-height: 400px;
+    border-radius: 6px;
+}
+
+.config-labels{
+    width: 400px;
+    margin: 20px;
+    .txt-label{
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+        text-align: right;
+        padding-right: 10px;
+        border-radius: 6px;  
+        background: #f3e2e2;
+        width: 200px;
+        float: left;
+    }
+    select{
+        float: right;
+        width: 150px;
+        height: 25px;
+        margin-top: 2px;
+    }
+}
+.arrow-steps .step {
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+    cursor: default;
+    margin: 0 3px;
+    padding: 10px 10px 10px 30px;
+    min-width: 180px;
+    float: left;
+    position: relative;
+    background-color: #d9e3f7;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    transition: background-color 0.2s ease;
+
+    &::after, &::before{
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: -17px;
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 17px solid #d9e3f7;	
+        z-index: 2;
+        transition: border-color 0.2s ease;
+    }
+
+    &::before{
+        right: auto;
+        left: 0;
+        border-left: 17px solid #fff;	
+        z-index: 0;    
+    }
+
+    &:first-child{
+        &::before{
+            border: none;
+        }
+        border-top-left-radius: 4px;
+	    border-bottom-left-radius: 4px;
+    }
+    span{
+        position: relative;
+        &::before{
+            opacity: 0;
+            content: "✔";
+            position: absolute;
+            top: -2px;
+            left: -20px;  
+        }
+    }
+    &.current{
+        color: #fff;
+        background-color: #23468c;
+        &::after{
+            border-left: 17px solid #23468c;
+        }
+    }
+
+}
+
+
+// .arrow-steps .step.done span:before {
+// 	opacity: 1;
+// 	-webkit-transition: opacity 0.3s ease 0.5s;
+// 	-moz-transition: opacity 0.3s ease 0.5s;
+// 	-ms-transition: opacity 0.3s ease 0.5s;
+// 	transition: opacity 0.3s ease 0.5s;
+// }
+
+// .arrow-steps .step.current {
+// 	color: #fff;
+// 	background-color: #23468c;
+// }
+
+// .arrow-steps .step.current:after {
+// 	border-left: 17px solid #23468c;	
+// }

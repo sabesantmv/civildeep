@@ -1,0 +1,26 @@
+{
+  "name": "dl4tm",
+  "version": "1.0.0",
+  "description": "Trademark vision reserach works",
+  "repository": "git@github.com:trademarkvision/deep.git",
+  "homepage": "https://trademark.vision/",
+  "license": "contact Trademark vision for any re-production of this work.",
+  "dependencies": {
+    "concat": "0.0.1-security",
+    "concat-map": "0.0.1",
+    "concurrently": "^2.1.0",
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.9.2",
+    "orb": "^1.0.9",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "superagent": "^2.0.0",
+    "watchify": "^3.0"
+  },
+  "scripts": {
+    "build-css": "node-sass scss/ -o css/",
+    "watch-css": "nodemon --watch scss/*.scss -x \"npm run build-css\"",
+    "watch": "concurrently \"npm run watch-css\"",
+    "build": "npm run build-css"
+  }
+}
